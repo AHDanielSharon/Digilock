@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="Digilock icon">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="36" fill="#020617"/>
+  <rect x="36" y="48" width="120" height="96" rx="16" fill="url(#g)" opacity="0.2"/>
+  <path d="M64 88a32 32 0 1 1 64 0v8h8a8 8 0 0 1 8 8v32a8 8 0 0 1-8 8H56a8 8 0 0 1-8-8v-32a8 8 0 0 1 8-8h8v-8Zm16 8h32v-8a16 16 0 1 0-32 0v8Z" fill="url(#g)"/>
+</svg>
