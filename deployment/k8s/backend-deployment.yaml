@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: digilock-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: digilock-backend
+  template:
+    metadata:
+      labels:
+        app: digilock-backend
+    spec:
+      containers:
+        - name: api
+          image: digilock/backend:1.0.0
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: digilock-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: digilock-backend
+spec:
+  selector:
+    app: digilock-backend
+  ports:
+    - port: 80
+      targetPort: 8080
